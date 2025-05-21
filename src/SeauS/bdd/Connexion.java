@@ -27,7 +27,7 @@ import java.sql.*;
  * @author Vincent Ducharme - Université de Sherbrooke
  * @version Version 3.0 - 21 mai 2016
  */
-public class Connexion
+public class Connexion implements IConnexion
 {
     private Connection conn;
 
@@ -145,5 +145,11 @@ public class Connexion
     {
         return "local : PostgreSQL installé localement\n"
              + "dinf  : PostgreSQL installé sur les serveurs du département\n";
+    }
+
+    public void demarreTransaction() throws Exception
+    {
+        // Fais rien en SQL. La transaction est démarrée automatiquement à un appel à
+        // executeQuery ou executeUpdate
     }
 }
