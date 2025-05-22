@@ -1,6 +1,7 @@
 package SeauS;
 
 import SeauS.bdd.Connexion;
+import SeauS.GestionSeauS;
 
 import java.io.*;
 import java.sql.SQLException;
