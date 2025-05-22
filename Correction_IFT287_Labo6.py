@@ -223,7 +223,7 @@ def execute_train(cipEtd):
 
             if fichierResultat != '':
                 try:
-                    resultat = execute_sql_file(FICHIER_PROF[-3])
+                    resultat = execute_sql_file(FICHIER_PROF[1])
                     log(resultat, outputFile, True)
                 except sub.CalledProcessError as e:
                     log("ERREUR lors de la création des tables : " + e.output.decode(ENCODAGE_UTF8), outputFile, True)
@@ -247,7 +247,7 @@ def execute_train(cipEtd):
                         log(resultat_java, outputFile, True)
 
                         try:
-                            resultat_sql = execute_sql_file(FICHIER_PROF[-1])
+                            resultat_sql = execute_sql_file(FICHIER_PROF[3])
                             log(resultat_sql, outputFile, True)
                             if "PSQLException" not in resultat_java: # indique qu'il y a une erreur dans le script SQL
                                 score +=1
@@ -265,7 +265,7 @@ def execute_train(cipEtd):
                 log('Impossible de trouver le document ' + fichierResultat + ' ou une classe appropriée dans votre projet', outputFile, True)
                 return score
             try: # destruction.sql
-                resultat = execute_sql_file(FICHIER_PROF[-2])
+                resultat = execute_sql_file(FICHIER_PROF[2])
                 log(resultat, outputFile, True)
             except sub.CalledProcessError as e:
                 log("ERREUR lors de la suppression des tables : " + e.output.decode(ENCODAGE_UTF8), outputFile, True)

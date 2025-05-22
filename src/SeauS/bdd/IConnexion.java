@@ -23,7 +23,7 @@ public interface IConnexion {
     /**
      * Ferme une connexion
      */
-    void fermer) throws Exception;
+    void fermer() throws Exception;
 
     /**
      * Lance une transaction avec une base de données
