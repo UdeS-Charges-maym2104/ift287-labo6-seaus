@@ -16,7 +16,6 @@ FICHIER_A_PATH = "Labo6/SeauS/SeauS.class"
 SERVEURSQL = 'bd-info2.dinf.usherbrooke.ca'
 PORT = '5432'
 BDUSER = 'maym2104'
-BDPASSWORD = 'ohChohhoo1Ba'
 BDNAME = 'maym2104db'
 
 FICHIERS_REQUIS = ['TP2/creation.sql', 'TP2/destruction.sql', 'TP2/affichage.sql']
